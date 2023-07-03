@@ -1,22 +1,17 @@
-import logo from './logo.svg';
+import Greeting from './components/Greeting';
+
 import './App.css';
+
+const flintstones = ['Fred', 'Barney', 'Wilma', 'Dino', 'Betty', 'Bam-Bam', 
+                      'Pebbles', 'Mr.Slate']
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Meet The Flintstones</h1>
+      {flintstones.map(flintstone => <Greeting key={flintstone} name={flintstone} />)}
       </header>
     </div>
   );
